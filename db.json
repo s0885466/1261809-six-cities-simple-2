@@ -1,0 +1,28 @@
+{
+    "offerSets": {
+      "citiesSet": [
+        "Paris",
+        "Cologne",
+        "Brussels",
+        "Amsterdam",
+        "Hamburg",
+        "Dusseldorf"
+      ],
+      "advantagesSet": [
+        "Breakfast",
+        "Airconditioning",
+        "Laptop",
+        "friendly workspace",
+        "Baby seat",
+        "Washer",
+        "Towels",
+        "Fridge"
+      ],
+      "accommodationTypesSet": [
+        "apartment",
+        "house",
+        "room",
+        "hotel"
+      ]
+    }
+}
