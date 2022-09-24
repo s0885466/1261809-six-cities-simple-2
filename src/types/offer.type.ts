@@ -1,43 +1,8 @@
-export enum AccommodationType {
-  apartment = 'apartment',
-  house = 'house',
-  room = 'room',
-  hotel = 'hotel',
-}
-
-export enum Advantages {
-  breakfast = 'Breakfast',
-  airConditioning = 'Airconditioning',
-  laptop = 'Laptop',
-  friendlyWorkspace = 'friendly workspace',
-  babySeat = 'Baby seat',
-  washer = 'Washer',
-  towels = 'Towels',
-  fridge = 'Fridge',
-}
-
-export enum Cities {
-  paris = 'Paris',
-  cologne = 'Cologne',
-  brussels = 'Brussels',
-  amsterdam = 'Amsterdam',
-  hamburg = 'Hamburg',
-  dusseldorf = 'Dusseldorf',
-}
-
-type Coordinates = {
-  latitude: number;
-  longitude: number;
-};
-
-export type ImageAccommodation = [
-  string,
-  string,
-  string,
-  string,
-  string,
-  string
-];
+import { Coordinates } from './coordinates.type.js';
+import { AccommodationType } from './accomodation-type.enum.js';
+import { Advantages } from './advantages.enum.js';
+import { Cities } from './cities.enum.js';
+import { ImageAccommodation } from './image-accomodation.type.js';
 
 export type Offer = {
   title: string;
