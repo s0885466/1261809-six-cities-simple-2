@@ -17,29 +17,39 @@
     "ts": "ts-node",
     "server": "json-server --watch db.json --port 8080",
     "generate": "node ./dist/cli --generate 1000 ./dist/mock/main.tsv http://localhost:8080/offerSets",
-    "import": "node ./dist/cli --import ./dist/mock/main.tsv"
+    "import": "node ./dist/cli --import ./dist/mock/main.tsv",
+    "start:app": "npm run ts ./src/app.ts | pino-pretty --colorize --translateTime SYS:standard"
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.5.0",
-    "@types/node": "^16.11.26",
-    "@typescript-eslint/eslint-plugin": "^5.18.0",
-    "@typescript-eslint/parser": "^5.18.0",
+    "@faker-js/faker": "7.5.0",
+    "@types/convict": "^6.1.1",
+    "@types/node": "16.11.26",
+    "@typescript-eslint/eslint-plugin": "5.18.0",
+    "@typescript-eslint/parser": "5.18.0",
     "axios": "0.27.2",
-    "eslint": "^8.12.0",
-    "eslint-config-htmlacademy": "^5.1.2",
+    "eslint": "8.12.0",
+    "eslint-config-htmlacademy": "5.1.2",
     "json-server": "0.17.0",
+    "pino-pretty": "9.1.1",
     "prettier": "2.7.1",
-    "rimraf": "^3.0.2",
-    "ts-node": "^10.7.0",
-    "typescript": "^4.6.3"
+    "rimraf": "3.0.2",
+    "ts-node": "10.7.0",
+    "typescript": "4.6.3"
   },
   "type": "module",
   "engines": {
-    "node": "^16.13.0",
-    "npm": "^8.1.0"
+    "node": "16.13.0",
+    "npm": "8.1.0"
   },
   "dependencies": {
     "@ngneat/falso": "6.1.0",
-    "app-root-path": "3.1.0"
+    "@types/convict-format-with-validator": "^6.0.2",
+    "app-root-path": "3.1.0",
+    "convict": "6.2.3",
+    "convict-format-with-validator": "^6.2.0",
+    "dotenv": "16.0.3",
+    "inversify": "6.0.1",
+    "pino": "8.6.1",
+    "reflect-metadata": "0.1.13"
   }
 }
