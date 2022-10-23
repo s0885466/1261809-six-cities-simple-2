@@ -11,6 +11,7 @@ export default class GenerateCommand implements CliCommandInterface {
     try {
       const fetchSets = new FetchSets();
       const offerSets = await fetchSets.fetch(url);
+
       if (offerSets instanceof Error) {
         console.error(offerSets.message);
       } else {

@@ -1,5 +1,5 @@
 import { FetchSetsInterface } from './fetch-sets.interface';
-import { OfferSets } from '../../types/offerSets.type.js';
+import { OfferSets } from '../../modules/offer/offerSets.type.js';
 import axios, { AxiosResponse } from 'axios';
 
 export default class FetchSets implements FetchSetsInterface {

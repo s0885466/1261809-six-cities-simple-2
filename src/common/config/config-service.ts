@@ -9,10 +9,7 @@ import { Component } from '../../types/component.types.js';
 @injectable()
 export class ConfigService implements ConfigInterface {
   private config: ConfigSchema;
-  private logger: LoggerInterface;
-  constructor(@inject(Component.LoggerInterface) logger: LoggerInterface) {
-    this.logger = logger;
-
+  constructor(@inject(Component.LoggerInterface) private logger: LoggerInterface) {
     const parsedOutput = config();
     if (parsedOutput.error) {
       throw new Error('Cant read .env file. Perhaps the file does not exists.');

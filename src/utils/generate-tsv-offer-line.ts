@@ -1,4 +1,4 @@
-import { Offer } from '../types/offer.type';
+import { Offer } from '../modules/offer/offer.type';
 
 const withTab = (str: string) => `${str}\t`;
 
@@ -26,5 +26,5 @@ export const generateTsvOfferLines = (offers: Offer[]) => {
       }, '')
       .trim();
 
-  return offers.map(generateSingleOfferLine).join('\n');
+  return `${offers.map(generateSingleOfferLine).join('\n')}\n`;
 };

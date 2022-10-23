@@ -7,6 +7,11 @@ export type ConfigSchema = {
   PORT: number;
   IP_DATABASE: string;
   SALT: string;
+  DB_USER: string;
+  DB_PASSWORD: string;
+  DB_HOST: string;
+  DB_PORT: number;
+  DB_NAME: string;
 };
 
 export const configSchema = convict<ConfigSchema>({
@@ -27,5 +32,35 @@ export const configSchema = convict<ConfigSchema>({
     format: String,
     env: 'SALT',
     default: null,
+  },
+  DB_USER: {
+    doc: 'Username to connect to the database (MongoDB)',
+    format: 'String',
+    env: 'DB_USER',
+    default: null,
+  },
+  DB_PASSWORD: {
+    doc: 'Password to connect to the database (MongoDB)',
+    format: 'String',
+    env: 'DB_PASSWORD',
+    default: null,
+  },
+  DB_HOST: {
+    doc: 'Host to connect to the database (MongoDB)',
+    format: 'String',
+    env: 'DB_HOST',
+    default: null,
+  },
+  DB_PORT: {
+    doc: 'Port to connect to the database (MongoDB)',
+    format: 'port',
+    env: 'DB_PORT',
+    default: null,
+  },
+  DB_NAME: {
+    doc: 'Database name (MongoDB)',
+    format: 'String',
+    env: 'DB_NAME',
+    default: 'course-nodejs-restapi',
   },
 });
